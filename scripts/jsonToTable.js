@@ -17,7 +17,7 @@ function convert() {
  let table = document.createElement("table");
  table.setAttribute("id", "Locations");
  table.setAttribute("class", "Locations dataTable");
- table.setAttribute("style", "width:100%");
+ table.setAttribute("style", "max-width:60%; margin-top: 40px");
  table.setAttribute("aria-describedby", "Locations_info");
  // Get the keys (column names) of the first object in the JSON data
  let cols = Object.keys(storeData[0]);
