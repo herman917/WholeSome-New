@@ -11,6 +11,16 @@
 --------------------------------------------------------------*/
 
 /* ------------------------Custom css'------------------------ */
+#tag-line h2{
+  font-size: 28px;
+  margin:0 0 40px 0;
+  line-height: 48px;
+}
+
+#our-story p h3{
+  color: var(--color-secondary);
+}
+
 table{
   display: stripe;
 }
@@ -395,7 +405,7 @@ table{
 .topmenu ul li.active a, .topmenu ul li a:hover {
   text-decoration:none;
   color: var(--color-brand01);
-  text-shadow: var(--color-brand02) 1px 1px 10px;
+  /* text-shadow: var(--color-brand02) 1px 1px 10px; */
 }
 
 /* .topmenu ul li.active a, .topmenu ul li a:hover {
@@ -832,7 +842,10 @@ section {
   top: 0;
   left: 0;
   right: 0;
+  background-color: #F7DCC4;
 }
+
+
 
 .header .logo img {
   max-height: 90px;
@@ -883,9 +896,9 @@ section {
     justify-content: space-between;
     padding: 0 3px;
     font-family: var(--font-primary);
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-weight: 1000;
+    color: rgba(60, 60, 60, 0.6);
     text-transform: uppercase;
     white-space: nowrap;
     transition: 0.3s;
@@ -918,6 +931,7 @@ section {
     visibility: visible;
     width: 100%;
   }
+
 
   .navbar a:hover,
   .navbar .active,
@@ -1041,7 +1055,7 @@ section {
     font-family: var(--font-primary);
     font-size: 15px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(34, 34, 34, 0.7);
     white-space: nowrap;
     text-transform: uppercase;
     transition: 0.3s;
@@ -1767,7 +1781,7 @@ section {
 # About Section
 --------------------------------------------------------------*/
 .about h2 {
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
   font-family: var(--font-secondary);
   margin: 30px 0;
@@ -1781,12 +1795,13 @@ section {
 }
 
 .about .our-story {
-  padding: 40px;
+  padding: 12px !important;
   background-color: var(--color-brand01);
 }
 
 .our-story p{
-  color:var(--color-secondary)
+  color: var(--color-secondary);
+  font-size: 14px;
 }
 
 @media (min-width: 991px) {
@@ -1802,7 +1817,7 @@ section {
 }
 
 .about .our-story h3 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--color-secondary);
@@ -1849,8 +1864,10 @@ section {
 
 .about .about-img {
   min-height: 600px;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: auto;
+  
 }
 
 @media (min-width: 992px) {
