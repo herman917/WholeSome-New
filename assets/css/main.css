@@ -11,6 +11,47 @@
 --------------------------------------------------------------*/
 
 /* ------------------------Custom css'------------------------ */
+table{
+  display: stripe;
+}
+
+.dataTables tr {
+  min-height: 135px !important; /* or whatever height you need to make them all consistent */
+  }
+
+#Locations_filter{
+  margin-bottom: 20px;
+}
+
+#Locations_wrapper{
+  width: 90%;
+  margin: 30px auto;
+}
+
+#Locations_filter input {
+  margin-left: 10px;
+}
+
+#Locations_length{
+  /* display: none; */
+}
+
+.sorting::before{
+  display:none;
+}
+
+#Locations_info{
+  /* display:none; */
+  font-size:16px;
+}
+
+#Locations_paginate{
+  font-size:16px;
+}
+
+#Locations_previous{
+
+}
 
 /* ------------------------字體------------------------ */
 
