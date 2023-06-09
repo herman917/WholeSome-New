@@ -210,6 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
     $(function () {
-        $('#Locations-Table').DataTable();
+        //$('#Locations-Table').DataTable();
     });
 });
