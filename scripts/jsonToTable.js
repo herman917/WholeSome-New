@@ -5,7 +5,7 @@ fetch('../../assets/storeLocation-updated.json')
   .then(response => response.json())
   .then((data) => {
                      storeData = data;
-                     console.dir(data);
+                     //console.dir(data);
                   })
   .catch(error => console.log(error));
 
@@ -93,7 +93,9 @@ $(document).ready(function () {
             "next":       "下一頁",
             "previous":   "上一頁"
         },
-      }
+      },
+
+      "bDestroy": true
     });
 });
 

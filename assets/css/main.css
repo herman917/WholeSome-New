@@ -1055,10 +1055,11 @@ section {
     font-family: var(--font-primary);
     font-size: 15px;
     font-weight: 500;
-    color: rgba(34, 34, 34, 0.7);
+    color: var(--color-primary);
     white-space: nowrap;
     text-transform: uppercase;
     transition: 0.3s;
+    /* here */
   }
 
   .navbar a i,
