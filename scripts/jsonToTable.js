@@ -1,13 +1,16 @@
 //const {storeData} = require('../assets/store-location.json')
 let storeData;
 
-fetch('../../assets/storeLocation-updated.json')
-  .then(response => response.json())
-  .then((data) => {
-                     storeData = data;
-                     console.dir(data);
-                  })
-  .catch(error => console.log(error));
+// fetch('../../assets/storeLocation-updated.json')
+//   .then(response => response.json())
+//   .then((data) => {
+//                      storeData = data;
+//                      console.dir(data);
+//                   })
+//   .catch(error => console.log(error));
+
+import data from '../../assets/storeLocation-updated.json' assert {type: 'json'};
+storeData = data;
 
 function convert() {
  // Get the container element where the table will be inserted
