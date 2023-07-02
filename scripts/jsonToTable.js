@@ -1,18 +1,20 @@
 //const {storeData} = require('../assets/store-location.json')
 let storeData;
 
-// fetch('../../assets/storeLocation-updated.json')
-//   .then(response => response.json())
-//   .then((data) => {
-//                      storeData = data;
-//                      console.dir(data);
-//                   })
-//   .catch(error => console.log(error));
+fetch('../../assets/storeLocation-updated.json')
+  .then(response => response.json())
+  .then((data) => {
+                     storeData = data;
+                     //console.dir(data);
+                     convert(storeData);
+                  })
+  .catch(error => console.log(error));
 
-import data from '../../assets/storeLocation-updated.json' assert {type: 'json'};
+//import data from '../../assets/storeLocation-updated.json' assert {type: 'json'};
+//const { default: data } = await import("../../assets/storeLocation-updated.json", { assert: { type: "json" } });
 storeData = data;
 
-function convert() {
+function convert(storeData) {
  // Get the container element where the table will be inserted
  let container = document.getElementById("Locations_wrapper");
  // Create the table element
@@ -68,41 +70,46 @@ function convert() {
     table.appendChild(tbody);
  });
  container.appendChild(table) // Append the table to the container element
-}
 
-// Search
-/*
+
+ /*
 https://datatables.net/reference/option/language
 */
 $(document).ready(function () {
-    $('#Locations').DataTable({
-      "lengthChange": true,
-      // "iDisplayLength": 20,
-      "info": true,
-      "aria": false,
-      search: {
-            return: true,
-        },
-        "language": {
-         "search": "輸入關鍵字",
-         "zeroRecords": "找不到您搜尋的相關店面！",
-         "info": "顯示 _PAGES_ 頁中的第 _PAGE_ 頁",
-         "lengthMenu": "顯示 _MENU_ 則結果",
-         "infoEmpty":      "",
-         "infoFiltered": "(搜尋 _MAX_ 中的結果)",
-         "paginate": {
-            "first":      "第一頁",
-            "last":       "尾頁",
-            "next":       "下一頁",
-            "previous":   "上一頁"
-        },
-      },
+   $('#Locations').DataTable({
+     "lengthChange": true,
+     // "iDisplayLength": 20,
+     "info": true,
+     "aria": false,
+     search: {
+           return: true,
+       },
+       "language": {
+        "search": "輸入關鍵字",
+        "zeroRecords": "找不到您搜尋的相關店面！",
+        "info": "顯示 _PAGES_ 頁中的第 _PAGE_ 頁",
+        "lengthMenu": "顯示 _MENU_ 則結果",
+        "infoEmpty":      "",
+        "infoFiltered": "(搜尋 _MAX_ 中的結果)",
+        "paginate": {
+           "first":      "第一頁",
+           "last":       "尾頁",
+           "next":       "下一頁",
+           "previous":   "上一頁"
+       },
+     },
 
-      "bDestroy": true
-    });
+     "bDestroy": true
+   });
 });
 
 
+}
+
+// Search
+
+
+
 document.addEventListener('DOMContentLoaded', function(){
-   convert();
+   //convert();
 });
